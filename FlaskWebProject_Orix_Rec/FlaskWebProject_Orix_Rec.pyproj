@@ -29,6 +29,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="base_camera.py" />
+    <Compile Include="module.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="scaner_cap.py" />
     <Compile Include="camera.py" />
     <Compile Include="camera_opencv.py" />

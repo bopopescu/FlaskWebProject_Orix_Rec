@@ -243,15 +243,6 @@
                             <div class="page-wrapper">
                                 <!-- [ Main Content ] start -->
 
-                                <form action="/test">
-                                    <p>
-                                        <label>test: </label>
-                                        <input type="text" name="test" value="default">
-                                        <button type="submit" formmethod="get">GET</button>
-                                        <button type="submit" formmethod="post">POST</button>
-                                    </p>
-                                </form>
-
                                 <div class="row">
                                     <!--[ daily sales section ] start-->
 
@@ -279,9 +270,9 @@
                                     <!--[ Monthly  sales section ] starts-->
                                     <div class="col-md-6 col-xl-6">
                                         <div class="card Monthly-sales">
-                                            <form action="change_camera_state" method="POST">
-                                                <button type="submit" name="camera_state" value="End_of_recording" class="btn btn-outline-danger" title="btn btn-outline-danger" data-toggle="tooltip">End of recording</button>
-                                            </form>
+                                            
+                                            <button onclick="location.href='./rec_stop'" class="btn btn-outline-danger" title="btn btn-outline-danger" data-toggle="tooltip">End of recording</button>
+                                            
                                             <div class="card-block">
                                                 <div class="row d-flex align-items-center">
                                                     <div class="col-9">
@@ -294,6 +285,14 @@
                                         </div>
                                     </div>
 
+                                    <br>
+                                    <div class="col-md-12 col-xl-12">
+                                        <div class="card Monthly-sales">
+                                            <div class="card-block">
+                                                <img src="{{ url_for('video_feed') }}" width="100%">
+                                            </div>
+                                        </div>
+                                    </div>
 
 
                                     <div class="col-md-12 col-xl-12">
@@ -301,10 +300,8 @@
                                             <button onclick="location.href='./stream'" class="btn btn-outline-success" title="SCANeRから情報を取得します" data-toggle="tooltip"><i class="feather icon-camera text-c-green f-30 m-r-10"></i>Scaner</button>
                                             <div class="card-block">
                                                 <div class="row d-flex align-items-center">
-                                                    <div class="col-10">
+                                                    <div class="col-12">
                                                         <h3 class="f-w-300 d-flex align-items-center m-b-0">
-
-
                                                             <div class="container2">
                                                                 <div class="inner2">
                                                                     {% for item in rows %}
@@ -312,11 +309,6 @@
                                                                     {% endfor %}
                                                                 </div>
                                                             </div>
-
-                                                            {% if message %}
-                                                            {% else %}
-                                                            速度
-                                                            {% endif %}
                                                         </h3>
                                                     </div>
                                                 </div>
@@ -327,14 +319,7 @@
                                     <!--[ year  sales section ] starts-->
                                     <!--[ year  sales section ] end-->
                                     <!--[ Recent Users ] start-->
-                                    <br>
-                                    <div class="col-md-12 col-xl-12">
-                                        <div class="card Monthly-sales">
-                                            <div class="card-block">
-                                                <img src="{{ url_for('video_feed') }}" width="100%">
-                                            </div>
-                                        </div>
-                                    </div>
+
 
                                     <div class="col-xl-8 col-md-6">
                                         <div class="card Recent-Users">
