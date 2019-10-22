@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>d27599d0-e0bf-439b-b84e-216fabf7c0e3</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <ProjectTypeGuids>{789894c7-04a9-4a11-a6b5-3f4435165112};{1b580a1a-fdb3-4b32-83e1-6407eb2722e6};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <StartupFile>runserver.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <LaunchProvider>Web launcher</LaunchProvider>
+    <WebBrowserUrl>http://localhost</WebBrowserUrl>
+    <OutputPath>.</OutputPath>
+    <SuppressCollectPythonCloudServiceFiles>true</SuppressCollectPythonCloudServiceFiles>
+    <Name>FlaskWebProject_Orix_Rec</Name>
+    <RootNamespace>FlaskWebProject_Orix_Rec</RootNamespace>
+    <InterpreterId>MSBuild|env|$(MSBuildProjectFullPath)</InterpreterId>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="base_camera.py" />
+    <Compile Include="scaner_cap.py" />
+    <Compile Include="camera.py" />
+    <Compile Include="camera_opencv.py" />
+    <Compile Include="runserver.py" />
+    <Compile Include="FlaskWebProject_Orix_Rec\__init__.py" />
+    <Compile Include="FlaskWebProject_Orix_Rec\views.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="FlaskWebProject_Orix_Rec\" />
+    <Folder Include="FlaskWebProject_Orix_Rec\static\" />
+    <Folder Include="FlaskWebProject_Orix_Rec\static\assets\" />
+    <Folder Include="FlaskWebProject_Orix_Rec\static\assets\css\" />
+    <Folder Include="FlaskWebProject_Orix_Rec\static\assets\fonts\" />
+    <Folder Include="FlaskWebProject_Orix_Rec\static\assets\fonts\datta\" />
+    <Folder Include="FlaskWebProject_Orix_Rec\static\assets\fonts\datta\fonts\" />
+    <Folder Include="FlaskWebProject_Orix_Rec\static\assets\fonts\feather\" />
+    <Folder Include="FlaskWebProject_Orix_Rec\static\assets\fonts\feather\css\" />
+    <Folder Include="FlaskWebProject_Orix_Rec\static\assets\fonts\feather\fonts\" />
+    <Folder Include="FlaskWebProject_Orix_Rec\static\assets\fonts\fontawesome\" />
+    <Folder Include="FlaskWebProject_Orix_Rec\static\assets\fonts\fontawesome\css\" />
+    <Folder Include="FlaskWebProject_Orix_Rec\static\assets\fonts\fontawesome\webfonts\" />
+    <Folder Include="FlaskWebProject_Orix_Rec\static\assets\images\" />
+    <Folder Include="FlaskWebProject_Orix_Rec\static\assets\images\browser\" />
+    <Folder Include="FlaskWebProject_Orix_Rec\static\assets\images\slider\" />
+    <Folder Include="FlaskWebProject_Orix_Rec\static\assets\images\user\" />
+    <Folder Include="FlaskWebProject_Orix_Rec\static\assets\images\widget\" />
+    <Folder Include="FlaskWebProject_Orix_Rec\static\assets\js\" />
+    <Folder Include="FlaskWebProject_Orix_Rec\static\assets\js\pages\" />
+    <Folder Include="FlaskWebProject_Orix_Rec\static\assets\plugins\" />
+    <Folder Include="FlaskWebProject_Orix_Rec\static\assets\plugins\amchart\" />
+    <Folder Include="FlaskWebProject_Orix_Rec\static\assets\plugins\amchart\js\" />
+    <Folder Include="FlaskWebProject_Orix_Rec\static\assets\plugins\amchart\js\images\" />
+    <Folder Include="FlaskWebProject_Orix_Rec\static\assets\plugins\animation\" />
+    <Folder Include="FlaskWebProject_Orix_Rec\static\assets\plugins\animation\css\" />
+    <Folder Include="FlaskWebProject_Orix_Rec\static\assets\plugins\bootstrap\" />
+    <Folder Include="FlaskWebProject_Orix_Rec\static\assets\plugins\bootstrap\css\" />
+    <Folder Include="FlaskWebProject_Orix_Rec\static\assets\plugins\bootstrap\js\" />
+    <Folder Include="FlaskWebProject_Orix_Rec\static\assets\plugins\chart-morris\" />
+    <Folder Include="FlaskWebProject_Orix_Rec\static\assets\plugins\chart-morris\css\" />
+    <Folder Include="FlaskWebProject_Orix_Rec\static\assets\plugins\chart-morris\js\" />
+    <Folder Include="FlaskWebProject_Orix_Rec\static\assets\plugins\google-maps\" />
+    <Folder Include="FlaskWebProject_Orix_Rec\static\assets\plugins\google-maps\js\" />
+    <Folder Include="FlaskWebProject_Orix_Rec\static\assets\plugins\jquery-scrollbar\" />
+    <Folder Include="FlaskWebProject_Orix_Rec\static\assets\plugins\jquery-scrollbar\css\" />
+    <Folder Include="FlaskWebProject_Orix_Rec\static\assets\plugins\jquery-scrollbar\js\" />
+    <Folder Include="FlaskWebProject_Orix_Rec\static\assets\plugins\jquery-ui\" />
+    <Folder Include="FlaskWebProject_Orix_Rec\static\assets\plugins\jquery-ui\js\" />
+    <Folder Include="FlaskWebProject_Orix_Rec\static\assets\plugins\jquery\" />
+    <Folder Include="FlaskWebProject_Orix_Rec\static\assets\plugins\jquery\js\" />
+    <Folder Include="FlaskWebProject_Orix_Rec\static\content\" />
+    <Folder Include="FlaskWebProject_Orix_Rec\static\fonts\" />
+    <Folder Include="FlaskWebProject_Orix_Rec\static\scripts\" />
+    <Folder Include="FlaskWebProject_Orix_Rec\static\vs2013\" />
+    <Folder Include="FlaskWebProject_Orix_Rec\static\vs2013\platforms\" />
+    <Folder Include="FlaskWebProject_Orix_Rec\static\vs2013\plugins\" />
+    <Folder Include="FlaskWebProject_Orix_Rec\templates\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\css\style.css" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\fonts\datta\datta-icon.css" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\fonts\datta\fonts\pct.eot" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\fonts\datta\fonts\pct.svg" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\fonts\datta\fonts\pct.ttf" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\fonts\datta\fonts\pct.woff" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\fonts\feather\css\feather.css" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\fonts\feather\fonts\feather.eot" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\fonts\feather\fonts\feather.svg" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\fonts\feather\fonts\feather.ttf" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\fonts\feather\fonts\feather.woff" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\fonts\fontawesome\css\fontawesome-all.min.css" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\fonts\fontawesome\webfonts\fa-brands-400.eot" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\fonts\fontawesome\webfonts\fa-brands-400.svg" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\fonts\fontawesome\webfonts\fa-brands-400.ttf" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\fonts\fontawesome\webfonts\fa-brands-400.woff" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\fonts\fontawesome\webfonts\fa-brands-400.woff2" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\fonts\fontawesome\webfonts\fa-regular-400.eot" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\fonts\fontawesome\webfonts\fa-regular-400.svg" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\fonts\fontawesome\webfonts\fa-regular-400.ttf" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\fonts\fontawesome\webfonts\fa-regular-400.woff" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\fonts\fontawesome\webfonts\fa-regular-400.woff2" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\fonts\fontawesome\webfonts\fa-solid-900.eot" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\fonts\fontawesome\webfonts\fa-solid-900.svg" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\fonts\fontawesome\webfonts\fa-solid-900.ttf" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\fonts\fontawesome\webfonts\fa-solid-900.woff" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\fonts\fontawesome\webfonts\fa-solid-900.woff2" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\images\browser\chrome.png" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\images\browser\firefox.png" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\images\browser\ie.png" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\images\browser\opera.png" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\images\browser\safari.png" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\images\browser\Thumbs.db" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\images\favicon.ico" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\images\logo-dark.png" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\images\logo-thumb.png" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\images\logo.png" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\images\slider\img-slide-1.jpg" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\images\slider\img-slide-2.jpg" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\images\slider\img-slide-3.jpg" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\images\slider\img-slide-4.jpg" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\images\slider\img-slide-5.jpg" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\images\slider\img1.jpg" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\images\slider\img2.jpg" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\images\slider\img3.jpg" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\images\Thumbs.db" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\images\user\avatar-1.jpg" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\images\user\avatar-2.jpg" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\images\user\avatar-3.jpg" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\images\user\avatar-4.jpg" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\images\user\avatar-5.jpg" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\images\user\Thumbs.db" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\images\user\user-1.png" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\images\user\user-2.png" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\images\widget\dashborad-1.png" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\images\widget\dashborad-2.png" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\images\widget\dashborad-3.png" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\images\widget\dashborad-4.png" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\images\widget\dashborad-5.png" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\images\widget\dashborad-6.png" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\images\widget\emoticon.png" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\images\widget\Thumbs.db" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\js\pages\chart-morris-custom.js" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\js\pages\google-maps.js" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\js\pcoded.min.js" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\js\vendor-all.min.js" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\plugins\amchart\js\amcharts.js" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\plugins\amchart\js\ammap.min.js" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\plugins\amchart\js\gauge.js" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\plugins\amchart\js\images\dragIconRoundBig.svg" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\plugins\amchart\js\images\lens.svg" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\plugins\amchart\js\light.js" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\plugins\amchart\js\pie.min.js" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\plugins\amchart\js\radar.js" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\plugins\amchart\js\serial.js" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\plugins\amchart\js\usaLow.js" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\plugins\amchart\js\worldLow.js" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\plugins\animation\css\animate.min.css" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\plugins\bootstrap\css\bootstrap.css" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\plugins\bootstrap\css\bootstrap.min.css" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\plugins\bootstrap\js\bootstrap.js" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\plugins\bootstrap\js\bootstrap.min.js" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\plugins\bootstrap\js\popover.js" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\plugins\chart-morris\css\morris.css" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\plugins\chart-morris\js\morris.min.js" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\plugins\chart-morris\js\raphael.min.js" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\plugins\google-maps\js\gmaps.js" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\plugins\jquery-scrollbar\css\jquery.scrollbar.min.css" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\plugins\jquery-scrollbar\js\jquery.scrollbar.min.js" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\plugins\jquery-ui\js\jquery-ui.js" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\assets\plugins\jquery\js\jquery.min.js" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\Advanced_CSharp.exe" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\AFSActivationStrategy.mexw64" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\AFSActivationStrategyResult.mexw64" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\AFSControlStrategy.mexw64" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\AFSScanerData.mexw64" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\afsShm.dll" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\Basic.exe" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\Basic_CSharp.exe" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\DtApi.dll" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\DynamicAfsSample.dll" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\ExportChannels.exe" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\ExternalDefects.dll" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\FlashControl.exe" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\FullAfsSample.dll" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\gdal111.dll" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\geos.dll" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\geos_c.dll" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\HighLevel.exe" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\HPTimeLog.dll" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\ImageSharingSample.exe" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\ImageSharing_C.dll" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\Interpreter.exe" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\IS_VideoCapture.exe" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\ITN.dll" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\LaserMeterViewer.exe" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\libexpat.dll" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\LowLevel.exe" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\MotionConfig.dll" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\NightTestAPISample.exe" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\NightTestAPI_C.dll" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\ObjectsViewer.exe" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\opencv_core248.dll" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\opencv_highgui248.dll" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\OsgGLPlugin.dll" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\OsgInfrastructurePlugin.dll" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\OsgPlugin.dll" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\platforms\qwindows.dll" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\plugins\MonoMachineSynchronization.dll" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\plugins\MotionSampleCom.dll" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\plugins\MotionSampleStrategy.dll" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\plugins\NTPClock.dll" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\plugins\rqSample.dll" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\plugins\SampleDriver.dll" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\plugins\VehicleDynamicsSample.dll" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\plugins\VENSynchronization.dll" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\ProcessEditor.dll" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\proj.dll" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\Qt5Core.dll" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\Qt5Gui.dll" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\Qt5Widgets.dll" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\Qt5Xml.dll" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\RNDProcess.dll" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\RoadXML.dll" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\rq.dll" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\sampleDynamicHeightMap.exe" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\SampleReplayControlPlugin.dll" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\scanerAPISampleADASRadarTargetsDetection.exe" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\scanerAPISampleADASUltrasonicParkingSensor.exe" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\scanerAPISampleComClientInterface.exe" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\scanerAPISampleComModelShm.exe" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\scanerAPISampleEvent.exe" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\ScanerAPISampleObject.exe" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\scanerAPISampleProcess.exe" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\scanerAPISampleRadar.exe" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\scanerAPISampleRadarDetection.exe" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\scanerAPISampleRadarTargetsInHeadlights.exe" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\scanerAPISampleScriptAcquisitionMapping.exe" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\scanerAPISampleSimulation.exe" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\scanerAPISampleSpy.exe" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\scanerAPISampleTrafficLight.exe" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\scanerAPISampleTrafficTakeOver.exe" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\scanerAPISampleWeatherControl.exe" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\SCANeRSKLauncher.exe" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\SCANeRVersion.dll" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\SCANeR_API_C.1.7.dll" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\SCANeR_API_Controller.mexw64" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\SCANeR_API_Launcher.mexw64" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\SCANeR_API_Message.mexw64" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\SCANeR_API_NET.dll" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\SCANeR_Image_Sharing_API_ImgRead.mexw64" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\ScenarioAPI.dll" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\scenarioAPISampleScanerAPI.exe" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\ScenarioCfg.dll" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\SimpleEngine.dll" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\SinusPilot.dll" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\SinusPilot_C.dll" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\sqlite3_i.dll" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\StaticAfsSample.dll" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\stk.dll" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\stkCurve.dll" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\stkFilter.dll" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\stkMesh.dll" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\stkUtils.dll" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\UDPCabin.exe" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\UDPRTGatewayIO.exe" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\Utilities.dll" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\VehicleDynamics.dll" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\VEN.dll" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\VEN.pyd" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\VEN2.dll" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\VEN_Controller.mexw64" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\VEN_C_NET.dll" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\VEN_Message.mexw64" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\xerces-c_3_1.dll" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\XmlSection.dll" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\vs2013\xqilla23.dll" />
+    <Content Include="FlaskWebProject_Orix_Rec\templates\auth-reset-password.html" />
+    <Content Include="FlaskWebProject_Orix_Rec\templates\auth-signin.html" />
+    <Content Include="FlaskWebProject_Orix_Rec\templates\auth-signup.html" />
+    <Content Include="FlaskWebProject_Orix_Rec\templates\bc_badges.html" />
+    <Content Include="FlaskWebProject_Orix_Rec\templates\bc_breadcrumb-pagination.html" />
+    <Content Include="FlaskWebProject_Orix_Rec\templates\bc_button.html" />
+    <Content Include="FlaskWebProject_Orix_Rec\templates\bc_collapse.html" />
+    <Content Include="FlaskWebProject_Orix_Rec\templates\bc_tabs.html" />
+    <Content Include="FlaskWebProject_Orix_Rec\templates\bc_typography.html" />
+    <Content Include="FlaskWebProject_Orix_Rec\templates\chart-morris.html" />
+    <Content Include="FlaskWebProject_Orix_Rec\templates\form_elements.html" />
+    <Content Include="FlaskWebProject_Orix_Rec\templates\icon-feather.html" />
+    <Content Include="FlaskWebProject_Orix_Rec\templates\login.html" />
+    <Content Include="FlaskWebProject_Orix_Rec\templates\loginpartial.html" />
+    <Content Include="FlaskWebProject_Orix_Rec\templates\map-google.html" />
+    <Content Include="FlaskWebProject_Orix_Rec\templates\sample-page.html" />
+    <Content Include="FlaskWebProject_Orix_Rec\templates\tbl_bootstrap.html" />
+    <Content Include="requirements.txt" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\content\bootstrap.css" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\content\bootstrap.min.css" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\content\site.css" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\scripts\bootstrap.js" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\scripts\bootstrap.min.js" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\scripts\jquery-1.10.2.js" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\scripts\jquery-1.10.2.min.js" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\scripts\jquery-1.10.2.min.map" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\scripts\jquery.validate-vsdoc.js" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\scripts\jquery.validate.js" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\scripts\jquery.validate.min.js" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\scripts\modernizr-2.6.2.js" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\scripts\respond.js" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\scripts\respond.min.js" />
+    <Content Include="FlaskWebProject_Orix_Rec\static\scripts\_references.js" />
+    <Content Include="FlaskWebProject_Orix_Rec\templates\about.html" />
+    <Content Include="FlaskWebProject_Orix_Rec\templates\contact.html" />
+    <Content Include="FlaskWebProject_Orix_Rec\templates\index.html" />
+    <Content Include="FlaskWebProject_Orix_Rec\templates\layout.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include="env\">
+      <Id>env</Id>
+      <Version>2.7</Version>
+      <Description>env (Python 2.7 (64-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X64</Architecture>
+    </Interpreter>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Web.targets" />
+  <!-- Specify pre- and post-build commands in the BeforeBuild and 
+       AfterBuild targets below. -->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <AutoAssignPort>True</AutoAssignPort>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
