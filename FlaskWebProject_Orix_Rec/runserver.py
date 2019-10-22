@@ -136,10 +136,18 @@ def generate():
         sleep(1)
 
 
+
 @app.route('/stream')
 def stream_view():
-    rows = generate()
-    return Response(stream_with_context(stream_template('index.html', rows=rows)))
+    scaner_state
+    try:
+        if request.method == 'POST':
+            if message['scaner_state'] == [u'Start_recording']:
+                rows = generate()
+                return Response(stream_with_context(stream_template('index.html', rows=rows)))
+
+    except Exception as e:
+        pass
 
 
 @app.route('/scaner_get')
