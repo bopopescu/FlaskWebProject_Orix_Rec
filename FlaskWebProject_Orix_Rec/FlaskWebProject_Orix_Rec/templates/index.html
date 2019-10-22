@@ -44,11 +44,6 @@
             </div>
         </div>
 
-        <h1>websocket chat</h1>
-
-        <input type="text" id="msg" value="> message" />
-        <button id="sendBtn">send</button>
-        <ul id="rcv"></ul>
 
         <!-- [ Pre-loader ] End -->
         <!-- [ navigation menu ] start -->
@@ -301,17 +296,17 @@
                                         </div>
                                     </div>
 
-                                    <form action="stream" method="POST">
-                                        <button type="submit" name="scaner_state" value="Start_recording" class="btn btn-outline-success" title="btn btn-outline-success" data-toggle="tooltip">Scaner</button>
-                                    </form>
+
 
                                     <div class="col-md-12 col-xl-12">
                                         <div class="card daily-sales">
+                                            <button onclick="location.href='./stream'" class="btn btn-outline-success" title="SCANeRから情報を取得します" data-toggle="tooltip"><i class="feather icon-camera text-c-green f-30 m-r-10"></i>Scaner</button>
                                             <div class="card-block">
                                                 <div class="row d-flex align-items-center">
                                                     <div class="col-10">
                                                         <h3 class="f-w-300 d-flex align-items-center m-b-0">
-                                                            <i class="feather icon-camera text-c-green f-30 m-r-10"></i>
+
+
                                                             <div class="container2">
                                                                 <div class="inner2">
                                                                     {% for item in rows %}

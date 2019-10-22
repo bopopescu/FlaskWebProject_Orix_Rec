@@ -11,6 +11,7 @@ from flask import Flask, stream_with_context, request, Response, flash
 import time
 from time import sleep
 import threading
+import datetime
 
 # emulated camera
 from camera_opencv import Camera
@@ -33,20 +34,9 @@ message = {}
 HOST = []
 PORT = []
 
-@app.route("/", methods=["GET", "POST"])
-def exercise():
-    if request.method == "GET":
-        return """
-        下に整数を入力してください。奇数か偶数か判定します
-        <form action="/" method="POST">
-        <input name="num"></input>
-        </form>"""
-    else:
-        return """
-        {}は{}です！
-        <form action="/" method="POST">
-        <input name="num"></input>
-        </form>""".format(str(request.form["num"]), ["偶数", "奇数"][int(request.form["num"]) % 2])
+#app = Flask(__name__)
+
+
 
 def func1():
     global FLAG
@@ -96,9 +86,14 @@ def change_camera_state():
                
                 message['velo'] = scaner_cap.data_get()
 
-                sql = "UPDATE `"+table_name+"` SET lddt=" + str(lddt) + ", ldd=" + str(ldd) + ", rev=" + str(rev) + ", sev=" + str(sev) + ", G_max=" + str(G_max) + " WHERE normal_list_id=" + str(id)
-                #print(sql)
+                message['datetime_now'] = datetime.datetime.now()
+                message['datetime_now_str'] = message['datetime_now'].strftime("%Y-%m-%d %H:%M:%S")
+                sql = "INSERT INTO `hazard_list`(`sub`, `DATE`, `hazard_type`) VALUES ('1000', '" + message['datetime_now_str'] + "', 1)"
+                print(sql)
                 mysql.indi_regist(sql)
+
+                thread_4 = threading.Thread(target=stream_view)
+                thread_4.start()
 
             if message['camera_state'] == [u'End_of_recording']:
                 message['camera_state'] = '録画開始'.decode('utf-8')
@@ -111,6 +106,28 @@ def change_camera_state():
 
     except Exception as e:
         return str(e)
+
+def rec_text_change():
+    global message
+    message['camera_state'] = '録画中'.decode('utf-8')
+    return render_template('index.html', message=message);
+
+@app.route('/stream')
+def stream_view():
+    global message
+
+    Camera().change_flag(1)
+
+    message['datetime_now'] = datetime.datetime.now()
+    message['datetime_now_str'] = message['datetime_now'].strftime("%Y-%m-%d %H:%M:%S")
+    sql = "INSERT INTO `hazard_list`(`sub`, `DATE`, `hazard_type`) VALUES ('1000', '" + message['datetime_now_str'] + "', 1)"
+    print(sql)
+    mysql.indi_regist(sql)
+
+    rows = generate()
+
+
+    return Response(stream_with_context(stream_template('index.html', rows=rows)))
 
 @app.route('/video_feed')
 def video_feed():
@@ -128,26 +145,18 @@ def stream_template(template_name, **context):
 
 data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0] 
 def generate():
+    global message
+
     while True:
         #for item in data:
         item2 = scaner_cap.data_get()
+
         print(item2)
         yield str(item2)
         sleep(1)
 
 
 
-@app.route('/stream')
-def stream_view():
-    scaner_state
-    try:
-        if request.method == 'POST':
-            if message['scaner_state'] == [u'Start_recording']:
-                rows = generate()
-                return Response(stream_with_context(stream_template('index.html', rows=rows)))
-
-    except Exception as e:
-        pass
 
 
 @app.route('/scaner_get')
