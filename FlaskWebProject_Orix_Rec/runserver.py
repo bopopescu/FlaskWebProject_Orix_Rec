@@ -36,17 +36,6 @@ PORT = []
 
 #app = Flask(__name__)
 
-
-
-def func1():
-    global FLAG
-    while 1:
-        print("func1")
-        print(FLAG)
-        if(FLAG == 0):
-            break
-        time.sleep(1)
-
 def gen(camera):
     """Video streaming generator function."""
     while True:
@@ -62,55 +51,6 @@ def sca_gen():
         yield (b'--frame\r\n'
                b'Content-Type: image/jpeg\r\n\r\n' + velo + b'\r\n')
 
-@app.route('/change_camera_state', methods=['GET', 'POST'])
-def change_camera_state():
-    global message
-    global FLAG
-    global HOST
-    global PORT
-
-    print(request.form)
-    print(request.form.to_dict(flat=False))
-    message = request.form.to_dict(flat=False)
-    
-    message["host"] = HOST
-    message["port"] = PORT
-
-    try:
-        if request.method == 'POST':
-            #return request.form['test']
-            print(message['camera_state'])
-            if message['camera_state'] == [u'Start_recording']:
-                message['camera_state'] = '録画中'.decode('utf-8')
-                Camera().change_flag(1)
-               
-                message['velo'] = scaner_cap.data_get()
-
-                message['datetime_now'] = datetime.datetime.now()
-                message['datetime_now_str'] = message['datetime_now'].strftime("%Y-%m-%d %H:%M:%S")
-                sql = "INSERT INTO `hazard_list`(`sub`, `DATE`, `hazard_type`) VALUES ('1000', '" + message['datetime_now_str'] + "', 1)"
-                print(sql)
-                mysql.indi_regist(sql)
-
-                thread_4 = threading.Thread(target=stream_view)
-                thread_4.start()
-
-            if message['camera_state'] == [u'End_of_recording']:
-                message['camera_state'] = '録画開始'.decode('utf-8')
-                FLAG = 0
-                #thread_1.end()
-                Camera().change_flag(3)
-                
-            print(message)
-            return render_template('index.html', message=message);
-
-    except Exception as e:
-        return str(e)
-
-def rec_text_change():
-    global message
-    message['camera_state'] = '録画中'.decode('utf-8')
-    return render_template('index.html', message=message);
 
 @app.route('/stream')
 def stream_view():
@@ -143,7 +83,6 @@ def stream_template(template_name, **context):
     rv.disable_buffering()
     return rv
 
-data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0] 
 def generate():
     global message
 
@@ -157,49 +96,10 @@ def generate():
 
 
 
-
-
-@app.route('/scaner_get')
-def scaner_get():
-    global message
-    while 1:
-        print("scaner_get():")
-       
-        print(message)
-        return Response(sca_gen(),
-                    mimetype='multipart/x-mixed-replace; boundary=frame')
-
-
 def scaner_init():
     #print("dddd")
     scaner_cap.data_loop()
 
-
-def connect_UDP():
-    inst = socket.socket(socket.AF_INET, socket.SOCK_DGRAM) 
-    inst.bind(('127.0.0.1', 50007))
-    while True:
-        data, addr = inst.recvfrom(1024)
-        print("data: {}, addr: {}".format(data, addr))
-
-@app.route('/pipe')
-def pipe():
-   if request.environ.get('wsgi.websocket'):
-       ws = request.environ['wsgi.websocket']
-       while True:
-           time.sleep(1)
-           message = 'aaaaaa'
-           if message is None:
-               break
-           datetime_now = datetime.datetime.now()
-           data = {
-               'time': str(datetime_now),
-               'message': message
-           }
-           ws.send(json.dumps(data))
-           print(message)
-           print(data)
-   return
 
 
 if __name__ == '__main__':
