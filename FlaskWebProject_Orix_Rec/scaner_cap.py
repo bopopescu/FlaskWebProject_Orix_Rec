@@ -35,12 +35,12 @@ def data_loop():
         from_scaner_data = []
         time.sleep(1)
         if com.read_float(in_sender, in_msg, from_scaner_data, 2) == 0:
-            print('recieve ' + in_sender + '/' + in_msg)
-            print(from_scaner_data)
-            print('v [km/h] : ' + str(from_scaner_data[0]*3.6))
+            #print('recieve ' + in_sender + '/' + in_msg)
+            #print(from_scaner_data)
+            #print('v [km/h] : ' + str(from_scaner_data[0]*3.6))
             data_out = from_scaner_data[0]
         else:
-            print(com.get_error_string())
+            #print(com.get_error_string())
             data_out = com.get_error_string()
         nb_try = nb_try + 1
         #print nb_try

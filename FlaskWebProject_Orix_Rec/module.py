@@ -3,8 +3,16 @@ import os
 import shutil
 import cv2
 
-def video_2_frames(video_file, image_dir, image_file):
+import datetime
+
+def video_2_frames(message, image_file, mysql):
     # Delete the entire directory tree if it exists.
+    video_file = message['output_path']
+    image_dir = message['img_output_folder']
+    ID = message['id']
+    start_time = message['datetime_now']
+    frame_time = start_time
+
     print(video_file)
     if os.path.exists(image_dir):
         shutil.rmtree(image_dir)  
@@ -22,8 +30,17 @@ def video_2_frames(video_file, image_dir, image_file):
         flag, frame = cap.read()  # Capture frame-by-frame
         if flag == False:  # Is a frame left?
             break
-        cv2.imwrite(image_dir+image_file % str(i).zfill(6), frame)  # Save a frame
-        print('Save', image_dir+image_file % str(i).zfill(6))
-        i += 1
+        save_path = image_dir+image_file % str(i).zfill(6)
+        cv2.imwrite(save_path, frame)  # Save a frame
+        
+        print(frame_time)
+        frame_time_str = frame_time.strftime("%Y-%m-%d %H:%M:%S")
+        sql = "INSERT INTO `img_path`(`img_path`, `DATE`, `hazard_list_id`, `frame_id`) VALUES ('{0}', '{1}', {2}, {3})".format(1000, frame_time_str, ID, i)
+        print(sql)
+        mysql.indi_regist(sql)
 
+        print('Save', save_path)
+        i += 1
+        frame_time = frame_time + datetime.timedelta(milliseconds=100)
+        
     cap.release()  # When everything done, release the capture

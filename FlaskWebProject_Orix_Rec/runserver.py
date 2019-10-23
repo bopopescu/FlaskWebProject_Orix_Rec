@@ -62,21 +62,28 @@ def sca_gen():
 @app.route('/rec_stop')
 def rec_stop():
     global ID
+    global message
+
+    message['id'] = ID
     Camera().change_flag(3)
+    print(message)
     if(ID>0):
-        output_path = output_folder + str(ID) + ".avi"
-        new_path = shutil.move('output3.avi', output_path)
-        print(output_path)
+        message['output_path'] = output_folder + str(ID) + ".avi"
 
-        sql = "UPDATE `Drive_recorder` SET `full_path` = '{0}' WHERE `hazard_list_id`= {1}".format(output_path, ID)
+        #output_path = output_folder + str(ID) + ".avi"
+        new_path = shutil.move('output3.avi', message['output_path'])
+        print(message['output_path'])
+
+        sql = "UPDATE `Drive_recorder` SET `full_path` = '{0}' WHERE `hazard_list_id`= {1}".format(message['output_path'], ID)
         print(sql)
         mysql.indi_regist(sql)
-        sql = "UPDATE `hazard_list` SET `full_path` = '{0}' WHERE `id`= {1}".format(output_path, ID)
+        sql = "UPDATE `hazard_list` SET `full_path` = '{0}' WHERE `id`= {1}".format(message['output_path'], ID)
         print(sql)
         mysql.indi_regist(sql)
 
-        img_output_folder = output_folder + str(ID) + "/"
-        module.video_2_frames(output_path, img_output_folder, 'img_%s.png')
+        #img_output_folder = output_folder + str(ID) + "/"
+        message['img_output_folder'] = output_folder + str(ID) + "/"
+        module.video_2_frames(message, 'img_%s.png', mysql)
 
     return render_template('index.html')
 
