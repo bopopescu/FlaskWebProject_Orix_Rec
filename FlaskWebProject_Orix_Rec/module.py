@@ -35,7 +35,7 @@ def video_2_frames(message, image_file, mysql):
         
         print(frame_time)
         frame_time_str = frame_time.strftime("%Y-%m-%d %H:%M:%S")
-        sql = "INSERT INTO `img_path`(`img_path`, `DATE`, `hazard_list_id`, `frame_id`) VALUES ('{0}', '{1}', {2}, {3})".format(1000, frame_time_str, ID, i)
+        sql = "INSERT INTO `img_path`(`img_path`, `DATE`, `hazard_list_id`, `frame_id`) VALUES ('{0}', '{1}', {2}, {3})".format(save_path, frame_time_str, ID, i)
         print(sql)
         mysql.indi_regist(sql)
 
