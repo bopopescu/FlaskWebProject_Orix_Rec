@@ -182,6 +182,9 @@ def generate():
 
 
 
+
+
+
 def scaner_init():
     #print("dddd")
     scaner_cap.data_loop()
