@@ -1,0 +1,16 @@
+--県名　　：prefecture_name
+--平均年収：average_income
+SELECT
+    i1.id AS '県名'
+    , i1.g_max AS 'G_max'
+    , (SELECT count(i2.g_max)
+        FROM `normal_list` i2
+        WHERE i1.g_max < i2.g_max) + 1 AS '順位'
+FROM
+    `normal_list` i1
+ORDER BY
+    順位;
+
+
+
+	SELECT (SELECT COUNT(*) FROM `prefecture` AS `b` WHERE `a`.`population`

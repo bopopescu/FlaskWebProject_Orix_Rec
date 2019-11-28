@@ -36,7 +36,7 @@ class Camera(BaseCamera):
         y = 100
         w = 1920
         h = 1080
-        FRAME_RATE=10
+        FRAME_RATE=30
         accum_time = 0
         curr_fps = 0
         

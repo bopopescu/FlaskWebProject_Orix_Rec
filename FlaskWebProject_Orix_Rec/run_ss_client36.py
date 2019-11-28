@@ -2,7 +2,7 @@ import socket
 
 with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
     # サーバを指定
-    s.connect(('172.31.19.144', 50007))
+    s.connect(('172.31.19.115', 50007))
     # サーバにメッセージを送る
     s.sendall(b'1234567')
     # ネットワークのバッファサイズは1024。サーバからの文字列を取得する

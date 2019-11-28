@@ -38,7 +38,7 @@ def data_loop():
             #print('recieve ' + in_sender + '/' + in_msg)
             #print(from_scaner_data)
             #print('v [km/h] : ' + str(from_scaner_data[0]*3.6))
-            data_out = from_scaner_data[0]
+            data_out = from_scaner_data[0]*3.6
         else:
             #print(com.get_error_string())
             data_out = com.get_error_string()

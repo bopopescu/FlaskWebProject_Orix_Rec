@@ -29,6 +29,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="base_camera.py" />
+    <Compile Include="FlaskWebProject_Orix_Rec\templates\rank_generate.py" />
     <Compile Include="module.py">
       <SubType>Code</SubType>
     </Compile>
@@ -88,6 +89,7 @@
     <Folder Include="FlaskWebProject_Orix_Rec\static\vs2013\platforms\" />
     <Folder Include="FlaskWebProject_Orix_Rec\static\vs2013\plugins\" />
     <Folder Include="FlaskWebProject_Orix_Rec\templates\" />
+    <Folder Include="FlaskWebProject_Orix_Rec\dataset\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="FlaskWebProject_Orix_Rec\static\assets\css\style.css" />
@@ -297,12 +299,15 @@
     <Content Include="FlaskWebProject_Orix_Rec\templates\bc_tabs.html" />
     <Content Include="FlaskWebProject_Orix_Rec\templates\bc_typography.html" />
     <Content Include="FlaskWebProject_Orix_Rec\templates\chart-morris.html" />
+    <Content Include="FlaskWebProject_Orix_Rec\dataset\data_analy_GT_notNAN4.csv" />
     <Content Include="FlaskWebProject_Orix_Rec\templates\form_elements.html" />
     <Content Include="FlaskWebProject_Orix_Rec\templates\icon-feather.html" />
     <Content Include="FlaskWebProject_Orix_Rec\templates\login.html" />
     <Content Include="FlaskWebProject_Orix_Rec\templates\loginpartial.html" />
     <Content Include="FlaskWebProject_Orix_Rec\templates\map-google.html" />
+    <Content Include="FlaskWebProject_Orix_Rec\templates\result.html" />
     <Content Include="FlaskWebProject_Orix_Rec\templates\sample-page.html" />
+    <Content Include="FlaskWebProject_Orix_Rec\templates\sql_memo.txt" />
     <Content Include="FlaskWebProject_Orix_Rec\templates\tbl_bootstrap.html" />
     <Content Include="requirements.txt" />
     <Content Include="FlaskWebProject_Orix_Rec\static\content\bootstrap.css" />
